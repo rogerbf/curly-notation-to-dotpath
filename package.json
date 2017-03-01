@@ -52,5 +52,13 @@
     "distribution",
     "README.md"
   ],
-  "dependencies": {}
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rogerbf/curly-notation-to-dotpath.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rogerbf/curly-notation-to-dotpath/issues"
+  },
+  "homepage": "https://github.com/rogerbf/curly-notation-to-dotpath#readme"
 }
