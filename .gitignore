@@ -1,0 +1,8 @@
+node_modules
+distribution
+.DS_Store
+package
+curly-notation-to-dotpath*.tgz
+npm-debug.log
+.vscode
+coverage
