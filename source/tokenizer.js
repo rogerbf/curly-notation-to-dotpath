@@ -1,6 +1,6 @@
 module.exports = input =>
   input
-  .replace(`,`, ` `)
+  .replace(/,/g, ` `)
   .split(/([{}])|\s+/)
   .filter(value => value && value.length > 0)
   .map(value => {

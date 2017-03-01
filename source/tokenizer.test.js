@@ -47,3 +47,37 @@ test(`commas`, () => {
     { type: `close`, value: `}` }
   ])
 })
+
+test(`commas complex`, () => {
+  const data = `
+    {
+      a {
+        nested {
+          property,
+          two,
+          more
+        }
+      },
+      b {
+        c
+      }
+    }
+  `
+  expect(tokenizer(data)).toEqual([
+    { type: `open`, value: `{` },
+    { type: `key`, value: `a` },
+    { type: `open`, value: `{` },
+    { type: `key`, value: `nested` },
+    { type: `open`, value: `{` },
+    { type: `key`, value: `property` },
+    { type: `key`, value: `two` },
+    { type: `key`, value: `more` },
+    { type: `close`, value: `}` },
+    { type: `close`, value: `}` },
+    { type: `key`, value: `b` },
+    { type: `open`, value: `{` },
+    { type: `key`, value: `c` },
+    { type: `close`, value: `}` },
+    { type: `close`, value: `}` }
+  ])
+})
